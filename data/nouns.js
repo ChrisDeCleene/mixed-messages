@@ -38,7 +38,7 @@ exports.bodypart = [
   'Arm',
   'Knee',
   'Ankles',
-  'Wrests',
+  'Wrists',
   'Fingers',
   'Eyes',
   'Nose',
