@@ -1,66 +1,44 @@
-# Mixed Messages
+# Mixed-Messages
 
-A fantasy football team name generator.
+>Funny random Fantasy Football Team Names. 
+> ~ Chris DeCleene
 
----
-## Requirements
+## Table of contents
+[General info](#General-info)
 
-For development, you will only need Node.js and a node global package, Yarn, installed in your environement.
+[Technologies](#Technologies)
 
-### Node
-- #### Node installation on Windows
+[Setup](#Setup)
 
-  Just go on [official Node.js website](https://nodejs.org/) and download the installer.
-Also, be sure to have `git` available in your PATH, `npm` might need it (You can find git [here](https://git-scm.com/)).
+[Status](#Status)
 
-- #### Node installation on Ubuntu
+[Inspiration](#Inspiration)
 
-  You can install nodejs and npm easily with apt install, just run the following commands.
+[Contact](#Contact)
+### General info 
 
-      $ sudo apt install nodejs
-      $ sudo apt install npm
+This script is made for the Full-Stack learning path at Codecademy.
 
-- #### Other Operating Systems
-  You can find more information about the installation on the [official Node.js website](https://nodejs.org/) and the [official NPM website](https://npmjs.org/).
+### Technologies
 
-If the installation was successful, you should be able to run the following command.
+- Javascript 2021
+- Node - v16.8.0
+### Setup
 
-    $ node --version
-    v8.11.3
+To run this project, install it locally and run it with node.
+```
+% cd my-mixed-messages
 
-    $ npm --version
-    6.1.0
+% node script.js
+```
+### Status
 
-If you need to update `npm`, you can make it using `npm`! Cool right? After running the following command, just open again the command line and be happy.
+Project is: finished.
 
-    $ npm install npm -g
+### Inspiration
 
-###
-### Yarn installation
-  After installing node, this project will need yarn too, so just run the following command.
+Based on the Codecademy ideas.
 
-      $ npm install -g yarn
+### Contact
 
----
-
-## Install
-
-    $ git clone https://github.com/YOUR_USERNAME/PROJECT_TITLE
-    $ cd PROJECT_TITLE
-    $ yarn install
-
-## Configure app
-
-Open `a/nice/path/to/a.file` then edit it with your settings. You will need:
-
-- A setting;
-- Another setting;
-- One more setting;
-
-## Running the project
-
-    $ yarn start
-
-## Simple build for production
-
-    $ yarn build
+Created by [@ChrisDeCleene](https://www.github.com/ChrisDeCleene) - feel free to contact me!
