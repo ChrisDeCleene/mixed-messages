@@ -16,3 +16,52 @@ exports.football = [
   'End-Zone',
   'Tight-End'
 ];
+
+exports.wrestling = [
+  'Dropkick',
+  'Backbreaker',
+  'Brainbuster',
+  'Piledriver',
+  'Faebuster',
+  'Nelson Hold',
+  'Pin',
+  'Sharpshooter',
+  'Chokeslam',
+  'Cutter',
+  'Neckbrecker'
+];
+
+exports.bodypart = [
+  'Leg',
+  'Back',
+  'Hair',
+  'Arm',
+  'Knee',
+  'Ankles',
+  'Wrests',
+  'Fingers',
+  'Eyes',
+  'Nose',
+  'Ears'
+];
+
+exports.animal = [
+  'Cheetah',
+  'Lion',
+  'Jaguar',
+  'Cow',
+  'Dog',
+  'Monkey',
+  'Tiger',
+  'Panther',
+  'Bear',
+  'Ram',
+  'Cardinal',
+  'Moose',
+  'Deer',
+  'Gator',
+  'Badger',
+  'Mongoose',
+  'Fish',
+  'Dolphin'
+]

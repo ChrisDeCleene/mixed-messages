@@ -60,7 +60,6 @@ exports.sexy = [
   'Sensual',
   'Sensuous',
   'Arousing',
-  'Come-Hither',
   'Cuddly',
   'Flirtatious',
   'Kissable',
