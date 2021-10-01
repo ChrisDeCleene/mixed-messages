@@ -22,7 +22,7 @@ exports.wrestling = [
   'Backbreaker',
   'Brainbuster',
   'Piledriver',
-  'Faebuster',
+  'Facebuster',
   'Nelson Hold',
   'Pin',
   'Sharpshooter',
