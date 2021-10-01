@@ -20,11 +20,26 @@ class MixedMessages {
     this.noun = ''
   }
 
+
+  // Handles creation of random number to be used for index by passing it an array
+  generateRandomNumber(array) {
+    return Math.floor(Math.random()*array.length);
+  }
+
+
   // Log final result
   getResult() {
-    
-    // Create team name from the randomly generated variables
-    console.log(`Your team name is... ${this.name}'s ${this.adjective} ${this.noun}`);
+    // Create an array for the name value
+    const array = this.name.split('');
+    const lastLetter = array[array.length - 1]
+
+    // Check for names ending in 's'
+    if(lastLetter === 's') {
+      console.log(`Your team name is... ${this.name}' ${this.adjective} ${this.noun}`);
+    } else {
+      // Create team name from the randomly generated variables
+      console.log(`Your team name is... ${this.name}'s ${this.adjective} ${this.noun}`);
+    }
 
     // End application
     return;
@@ -44,25 +59,25 @@ class MixedMessages {
         // Store all noun categories
         const nounArray = [ football, wrestling, bodypart, animal ];
         // Get random index and random category then update the state of noun in MixedMessages constructor
-        const nounCategory = nounArray[Math.floor(Math.random()*nounArray.length)];
-        this.noun = nounCategory[Math.floor(Math.random()*nounCategory.length)];
+        const nounCategory = nounArray[this.generateRandomNumber(nounArray)];
+        this.noun = nounCategory[this.generateRandomNumber(nounCategory)];
         break;
 
       case 'football':
         // Get random index and update the state of noun in MixedMessages constructor
-        this.noun = football[Math.floor(Math.random()*football.length)];
+        this.noun = football[this.generateRandomNumber(football)];
         break;
 
       case 'wrestling':
-        this.noun = wrestling[Math.floor(Math.random()*wrestling.length)];
+        this.noun = wrestling[this.generateRandomNumber(wrestling)];
         break;
 
       case 'bodypart':
-        this.noun = bodypart[Math.floor(Math.random()*bodypart.length)];
+        this.noun = bodypart[this.generateRandomNumber(bodypart)];
         break;
 
       case 'animal':
-        this.noun = animal[Math.floor(Math.random()*animal.length)];
+        this.noun = animal[this.generateRandomNumber(animal)];
         break;
 
       default:
@@ -89,21 +104,21 @@ class MixedMessages {
         // Store all adjectives categories
         const adjectiveArray = [ common, vulgar, sexy ];
         // Get random index and random category then update the state of adjective in MixedMessages constructor
-        const adjectiveCategory = adjectiveArray[Math.floor(Math.random()*adjectiveArray.length)];
-        this.adjective = adjectiveCategory[Math.floor(Math.random()*adjectiveCategory.length)];
+        const adjectiveCategory = adjectiveArray[this.generateRandomNumber(adjectiveArray)];
+        this.adjective = adjectiveCategory[this.generateRandomNumber(adjectiveCategory)];
         break;
 
       case 'common':
         // Get random index and update the state of adjective in MixedMessages constructor
-        this.adjective = common[Math.floor(Math.random()*common.length)];
+        this.adjective = common[this.generateRandomNumber(common)];
         break;
 
       case 'vulgar':
-        this.adjective = vulgar[Math.floor(Math.random()*vulgar.length)];
+        this.adjective = vulgar[this.generateRandomNumber(vulgar)];
         break;
 
       case 'sexy':
-        this.adjective = sexy[Math.floor(Math.random()*sexy.length)];
+        this.adjective = sexy[this.generateRandomNumber(sexy)];
         break;
 
       default:
@@ -128,25 +143,25 @@ class MixedMessages {
     switch (nameLower) {
       case 'coach':
         // Get random index and update the state of name in MixedMessages constructor
-        this.name = coaches[Math.floor(Math.random()*coaches.length)];
+        this.name = coaches[this.generateRandomNumber(coaches)];
         break;
 
       case 'qb':
-        this.name = quarterbacks[Math.floor(Math.random()*quarterbacks.length)];
+        this.name = quarterbacks[this.generateRandomNumber(quarterbacks)];
         break;
 
       case 'rb':
-        this.name = runningbacks[Math.floor(Math.random()*runningbacks.length)];
+        this.name = runningbacks[this.generateRandomNumber(runningbacks)];
         break;
 
       case 'wr':
-        this.name = widereceivers[Math.floor(Math.random()*widereceivers.length)];
+        this.name = widereceivers[this.generateRandomNumber(widereceivers)];
         break;
 
       case 'any':
         const nameArray = [ coaches, quarterbacks, runningbacks, widereceivers ];
-        const nameCategory = nameArray[Math.floor(Math.random()*nameArray.length)];
-        this.name = nameCategory[Math.floor(Math.random()*name.length)];
+        const nameCategory = nameArray[this.generateRandomNumber(nameArray)];
+        this.name = nameCategory[this.generateRandomNumber(name)];
         break;
 
       default:
