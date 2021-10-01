@@ -20,6 +20,16 @@ class MixedMessages {
     this.noun = ''
   }
 
+  // Log final result
+  getResult() {
+    
+    // Create team name from the randomly generated variables
+    console.log(`Your team name is... ${this.name}'s ${this.adjective} ${this.noun}`);
+
+    // End application
+    return;
+  }
+
 
   // Prompt user for category, use category to select random string of array and update variable then log final team name
   getNoun() {
@@ -30,6 +40,14 @@ class MixedMessages {
     const nounLower = noun.toLowerCase();
 
     switch (nounLower) {
+      case 'any':
+        // Store all noun categories
+        const nounArray = [ football, wrestling, bodypart, animal ];
+        // Get random index and random category then update the state of noun in MixedMessages constructor
+        const nounCategory = nounArray[Math.floor(Math.random()*nounArray.length)];
+        this.noun = nounCategory[Math.floor(Math.random()*nounCategory.length)];
+        break;
+
       case 'football':
         // Get random index and update the state of noun in MixedMessages constructor
         this.noun = football[Math.floor(Math.random()*football.length)];
@@ -48,17 +66,12 @@ class MixedMessages {
         break;
 
       default:
-        const nounArray = [ football, wrestling, bodypart, animal ];
-        // Get random index and random category then update the state of name in MixedMessages constructor
-        const nounCategory = nounArray[Math.floor(Math.random()*nounArray.length)];
-        this.noun = nounCategory[Math.floor(Math.random()*noun.length)];
+        console.log('Sorry, not an option. Please try again.');
+        // Prompt user again for proper input
+        this.getNoun();
     }
 
-    // Create team name from the randomly generated variables
-    console.log(`Your team name is... ${this.name}'s ${this.adjective} ${this.noun}`);
-
-    // End application
-    return;
+    this.getResult();
   }
 
 
