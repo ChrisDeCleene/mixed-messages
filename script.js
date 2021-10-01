@@ -1,7 +1,7 @@
 const prompt = require('prompt-sync')({sigint: true});
 const { widereceivers, runningbacks, quarterbacks, coaches } = require('./data/names');
 const { common, vulgar, sexy } = require('./data/adjectives');
-const { football } = require('./data/nouns')
+const { football, wrestling, bodypart, animal } = require('./data/nouns')
 
 
 class MixedMessages {
@@ -13,11 +13,20 @@ class MixedMessages {
 
   getNoun() {
     console.log('We\'ve got an adjective: ' + this.adjective);
-    const noun = prompt('Pick a noun category: Any, Football: ');
+    const noun = prompt('Pick a noun category: Any, Football, Wrestling, Bodypart, or Animal: ');
     const nounLower = noun.toLowerCase();
     switch (nounLower) {
       case 'football':
         this.noun = football[Math.floor(Math.random()*football.length)];
+        break;
+      case 'wrestling':
+        this.noun = wrestling[Math.floor(Math.random()*wrestling.length)];
+        break;
+      case 'bodypart':
+        this.noun = bodypart[Math.floor(Math.random()*bodypart.length)];
+        break;
+      case 'animal':
+        this.noun = animal[Math.floor(Math.random()*animal.length)];
         break;
       default:
         const nounArray = [ football ];
